@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kelurahan Durian</title>
+	<link rel="stylesheet" type="text/css" href="css/data.css">
+</head>
+<body>
+
+    <section>
+        <nav class="animate__animated animate__lightSpeedInLeft animate__slower">
+            <ul>
+                <li><a href="/home">HOME</a></li>
+				<li><a href="/tambah">TAMBAH ANGGOTA</a></li>
+				<li><a href="/data">DATA PENDUDUK</a></li>
+				<li><a href="/sosmed">SOSMED</a></li>
+				<li><a href="/logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </section>
+<div class="konten d-flex">
+	<div class="card m-auto w-80">
+		<div class="p-2">
+			<h1 class="m-0">Daftar Penduduk Penerima Bantuan</h1>
+		</div>
+		<form method="post" action="/data" novalidate>
+		<input  class="search" type="text" name="search" placeholder="Search..">
+		</form>
+		</section>
+		<div class="p-2">
+			<table class="tg"  cellpadding="5" style="width: 100%;  ">
+				<thead>
+					<tr>
+						<td  class="navbar" width= "50px">NO.</td>
+						<td class="navbar" width= "300px">NO KTP PENDUDUK</td>
+						<td class="navbar">NAMA PENDUDUK</td>
+						<td class="navbar">ALAMAT PENDUDUK</td>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+					no = 0;
+					for(var i=0;i<data.length;i++){
+					no++;
+					%>
+					<tr>
+						<td class="navbar"><%=no%></td>
+						<td class="datapenduduk"><%=data[i].ktp_penduduk%></td>
+						<td class="datapenduduk"><%=data[i].nama_penduduk%></td>
+						<td class="datapenduduk"><%=data[i].alamat_penduduk%></td>
+					</tr>
+					<%}%>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

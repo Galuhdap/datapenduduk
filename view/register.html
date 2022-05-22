@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/Tambah.css">
+		<title>Kelurahan Durian</title>
+	</head>
+	<body>
+		<section>
+			<nav class="animate__animated animate__lightSpeedInLeft animate__slower">
+				<ul>
+					<li><a href="/home">HOME</a></li>
+					<li><a href="/tambah">TAMBAH ANGGOTA</a></li>
+					<li><a href="/data">DATA PENDUDUK</a></li>
+					<li><a href="/sosmed">SOSMED</a></li>
+					<li><a href="/logout">LOGOUT</a></li>
+				</ul>
+			</nav>
+		</section>
+		
+		
+        
+		<div class="login-form">
+			<h1>Tambah Anggota</h1>
+			<form action="/input" method="POST">
+				<input type="number" name="ktp" placeholder="No-Kartu Penduduk" required>
+				<input type="text" name="nama" placeholder="Nama" required>
+				<input type="date" name="tgl" placeholder="Tempat/Tanggal/Lahir" required>
+				<input type="text" name="alamat" placeholder="Alamat" required>
+				<input type="submit">
+				
+			</form>
+		</div>
+	</body>
+</html>
